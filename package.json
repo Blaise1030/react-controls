@@ -1,6 +1,23 @@
 {
   "name": "react-controls",
-  "version": "0.0.0",
+  "description": "Control Statements for react",
+  "author": "Blaise",
+  "keywords": [
+    "react",
+    "Conditionals"
+  ],
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blaise1030/react-controls.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
