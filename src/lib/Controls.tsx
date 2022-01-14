@@ -12,7 +12,7 @@ function IF({
   let cond = c;
   for (let comp of React.Children.toArray(children)) {
     const compName = (comp as any).type.name;
-    if (Boolean(compName)) {
+    if (Boolean(compName === "ELSEIF") || Boolean(compName === "ELSE")) {
       if (cond) break;
       cond = compName === "ELSE" ? true : (comp as any).props.c;
     } else if (cond) returnArray.push(comp);

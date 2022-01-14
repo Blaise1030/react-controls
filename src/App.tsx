@@ -12,9 +12,13 @@ function App() {
         <div>IF</div>
         <div>IF</div>
         <ELSEIF c={true} />
-        <div>ELSE IF 1</div>
-        <div>ELSE IF 1</div>
-        <div>ELSE IF 1</div>
+        <IF c={true}>
+          <div>hello</div>
+          <CustomComponent />
+          <ELSEIF c={true} />
+          <CustomComponent />
+          <CustomComponent />
+        </IF>
         <ELSEIF c={true} />
         <div>ELSE IF 2</div>
         <div>ELSE IF 2</div>
@@ -29,3 +33,7 @@ function App() {
 }
 
 export default App;
+
+const CustomComponent = () => {
+  return <div>This is a custom CustomComponent</div>;
+};
