@@ -27,11 +27,15 @@ function FOR<T>({
   each,
   from,
 }: {
-  each: (e: T) => React.ReactNode;
+  each: (e: T, index: number) => React.ReactNode;
   from: Array<T>;
 }) {
   const toReturn = [];
-  for (let c of from) toReturn.push(each(c));
+  let index = 0;
+  for (let c of from) {
+    toReturn.push(each(c, index));
+    index += 1;
+  }
   return <>{toReturn}</>;
 }
 
