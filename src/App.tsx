@@ -11,7 +11,7 @@ function App() {
         <div>IF</div>
         <div>IF</div>
         <div>IF</div>
-        <ELSEIF c={false} />
+        <ELSEIF c={true} />
         <IF c={true}>
           <div>hello</div>
           <CustomComponent />
